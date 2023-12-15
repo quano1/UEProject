@@ -20,12 +20,8 @@ echo:
 
 mkdir "Source"
 
-rem call %DotNet% %BuildToolDLL% -projectfiles -project=%PluginPath% -game -rocket -progress
 call %BuildTool% -projectfiles -project=%PluginPath% -game -rocket -progress
 
 echo:
 pause
 exit 0
-
-rem cmd.exe /c Build.bat  -projectfiles -project="F:/uews/${prj_}/${prj_}.uproject" -game -rocket -progress;
-

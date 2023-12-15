@@ -41,21 +41,10 @@ echo:
 
 mkdir "Source"
 
-rem call %AutomationToolPath% BuildGame -project=%UProject% -Rocket -TargetPlatforms=Win64
-
 call %AutomationToolPath% BuildTarget -project=%UProject% -platform=Win64 -configuration=Development -target=Editor -notools
-
-rem call %DotNet% %BuildToolDLL% EasyPoseProject Win64 Development -Project=%UProject% -log=build.log
-
-rem call %BuildTool% -projectfiles -project=%UProject% -Rocket -TargetPlatforms=Win64
-rem call msbuild.exe %MSVCSolution% /t:Build /p:Configuration="Development Editor" /p:Platform=Win64
 
 echo:
 
 endlocal
 pause
 exit 0
-
-rem cmd.exe /c Build.bat  -projectfiles -project="F:/uews/${prj_}/${prj_}.uproject" -game -rocket -progress;
-
-rem msbuild.exe "F:/uews/${prj_}/${prj_}.sln" /t:Build /p:Configuration="Development Editor" /p:Platform=Win64;

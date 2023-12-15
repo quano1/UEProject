@@ -1,10 +1,5 @@
 @echo off
 
-rem for %%i in (*.sln) do (
-rem     del "%%i"
-rem )
-
-rem rmdir /q/s ".vs"
 rmdir /q/s "Build"
 rmdir /q/s "Binaries"
 rmdir /q/s "Debug"
