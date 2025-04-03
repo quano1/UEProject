@@ -1,0 +1,16 @@
+{
+    "C_Cpp.files.exclude": {
+    },
+    "files.watcherExclude": {
+    },
+    "search.exclude": {
+    },
+    "files.exclude": {
+        "**/*.bin": true,
+        "**/*.uasset": true,
+        "**/Content/": true,
+        "**/Binaries/": true,
+        "**/DerivedDataCache/": true,
+        "**/Build/": true,
+    }
+}
