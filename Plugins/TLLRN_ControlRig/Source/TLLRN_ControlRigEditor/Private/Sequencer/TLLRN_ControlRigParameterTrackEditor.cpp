@@ -264,6 +264,7 @@ public:
 	
 	bool PassesFilter(const FContentBrowserItem& InItem) const override
 	{
+		// TLL TODO
 		// FAssetData AssetData;
 		// if (InItem.Legacy_TryGetAssetData(AssetData))
 		// {

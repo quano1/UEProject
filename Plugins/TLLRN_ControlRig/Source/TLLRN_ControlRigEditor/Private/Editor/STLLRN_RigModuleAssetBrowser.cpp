@@ -135,7 +135,7 @@ bool STLLRN_RigModuleAssetBrowser::OnShouldFilterAsset(const struct FAssetData& 
 	{
 		return true;
 	}
-
+	// TLL TODO
 	// static const FName AssetVariantPropertyName = GET_MEMBER_NAME_CHECKED(URigVMBlueprint, AssetVariant);
 	// const FProperty* AssetVariantProperty = CastField<FProperty>(URigVMBlueprint::StaticClass()->FindPropertyByName(AssetVariantPropertyName));
 	// const FString VariantStr = AssetData.GetTagValueRef<FString>(AssetVariantPropertyName);
@@ -190,7 +190,7 @@ TSharedRef<SToolTip> STLLRN_RigModuleAssetBrowser::CreateCustomAssetToolTip(FAss
 
 	// Add asset registry tags to a text list; except skeleton as that is implied in Persona
 	TSharedRef<SVerticalBox> DescriptionBox = SNew(SVerticalBox);
-
+	// TLL TODO
 	// static const FName AssetVariantPropertyName = GET_MEMBER_NAME_CHECKED(URigVMBlueprint, AssetVariant);
 	// const FProperty* AssetVariantProperty = CastField<FProperty>(URigVMBlueprint::StaticClass()->FindPropertyByName(AssetVariantPropertyName));
 	// const FString VariantStr = AssetData.GetTagValueRef<FString>(AssetVariantPropertyName);
