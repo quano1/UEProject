@@ -3094,7 +3094,7 @@ void FTLLRN_ControlRigEditor::GenerateEventQueueMenuContent(FMenuBuilder& MenuBu
 {
 	MenuBuilder.BeginSection(TEXT("Events"));
     MenuBuilder.AddMenuEntry(FTLLRN_ControlRigEditorCommands::Get().ConstructionEvent, TEXT("Setup"), TAttribute<FText>(), TAttribute<FText>(), GetEventQueueIcon(ConstructionEventQueue));
-    MenuBuilder.AddMenuEntry(FTLLRN_ControlRigEditorCommands::Get().ForwardsSolveEvent, TEXT("Forwards Solve"), TAttribute<FText>(), TAttribute<FText>(), GetEventQueueIcon(ForwardsSolveEventQueue));
+    MenuBuilder.AddMenuEntry(FTLLRN_ControlRigEditorCommands::Get().ForwardsSolveEvent, TEXT("TLLRN3 Forwards Solve"), TAttribute<FText>(), TAttribute<FText>(), GetEventQueueIcon(ForwardsSolveEventQueue));
     MenuBuilder.AddMenuEntry(FTLLRN_ControlRigEditorCommands::Get().BackwardsSolveEvent, TEXT("Backwards Solve"), TAttribute<FText>(), TAttribute<FText>(), GetEventQueueIcon(BackwardsSolveEventQueue));
     MenuBuilder.EndSection();
 

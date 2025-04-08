@@ -9,7 +9,7 @@
 /**
  * Event for driving the skeleton hierarchy with variables and rig elements
  */
-USTRUCT(meta=(DisplayName="Forwards Solve", Category="Events", NodeColor="1, 0, 0", Keywords="Begin,Update,Tick,Forward,Event"))
+USTRUCT(meta=(DisplayName="TLLRN1 Forwards Solve", Category="Events", NodeColor="1, 0, 0", Keywords="Begin,Update,Tick,Forward,Event"))
 struct TLLRN_CONTROLRIG_API FTLLRN_RigUnit_BeginExecution : public FTLLRN_RigUnit
 {
 	GENERATED_BODY()
@@ -24,7 +24,7 @@ struct TLLRN_CONTROLRIG_API FTLLRN_RigUnit_BeginExecution : public FTLLRN_RigUni
 	UPROPERTY(EditAnywhere, Transient, DisplayName = "Execute", Category = "BeginExecution", meta = (Output))
 	FTLLRN_ControlRigExecuteContext ExecuteContext;
 
-	static inline const FLazyName EventName = FLazyName(TEXT("Forwards Solve"));
+	static inline const FLazyName EventName = FLazyName(TEXT("TLLRN2 Forwards Solve"));
 };
 
 /**
