@@ -36,7 +36,7 @@ void UTLLRN_ModelingSelectionInteraction::Initialize(
 	RectangleMarqueeInteraction->OnDragRectangleFinished.AddUObject(this, &UTLLRN_ModelingSelectionInteraction::OnMarqueeRectangleFinished);
 
 	// set up path selection interaction
-	PathSelectionInteraction = NewObject<UPathSelectionInteraction>(this);
+	PathSelectionInteraction = NewObject<UTLLRN_PathSelectionInteraction>(this);
 	PathSelectionInteraction->Setup(this);
 
 	// create click behavior and set ourselves as click target
@@ -488,14 +488,14 @@ void UTLLRN_ModelingSelectionInteraction::OnMarqueeRectangleFinished(const FCame
 
 
 
-void UPathSelectionInteraction::Setup(UTLLRN_ModelingSelectionInteraction* SelectionInteractionIn)
+void UTLLRN_PathSelectionInteraction::Setup(UTLLRN_ModelingSelectionInteraction* SelectionInteractionIn)
 {
 
 	SelectionInteraction = SelectionInteractionIn;
 }
 
 
-FInputRayHit UPathSelectionInteraction::CanBeginClickDragSequence(const FInputDeviceRay& PressPos)
+FInputRayHit UTLLRN_PathSelectionInteraction::CanBeginClickDragSequence(const FInputDeviceRay& PressPos)
 {
 	if (SelectionInteraction->GetSelectionManager()->CanBeginTrackedSelectionChange())
 	{
@@ -504,7 +504,7 @@ FInputRayHit UPathSelectionInteraction::CanBeginClickDragSequence(const FInputDe
 	return FInputRayHit();
 }
 
-void UPathSelectionInteraction::OnClickPress(const FInputDeviceRay& PressPos)
+void UTLLRN_PathSelectionInteraction::OnClickPress(const FInputDeviceRay& PressPos)
 {
 	FGeometrySelectionUpdateConfig UpdateConfig = SelectionInteraction->GetActiveSelectionUpdateConfig();
 	UGeometrySelectionManager* SelectionManager = SelectionInteraction->GetSelectionManager();
@@ -523,7 +523,7 @@ void UPathSelectionInteraction::OnClickPress(const FInputDeviceRay& PressPos)
 	}
 }
 
-void UPathSelectionInteraction::OnClickDrag(const FInputDeviceRay& DragPos)
+void UTLLRN_PathSelectionInteraction::OnClickDrag(const FInputDeviceRay& DragPos)
 {
 	UGeometrySelectionManager* SelectionManager = SelectionInteraction->GetSelectionManager();
 	if (SelectionManager->IsInTrackedSelectionChange())
@@ -533,7 +533,7 @@ void UPathSelectionInteraction::OnClickDrag(const FInputDeviceRay& DragPos)
 	}
 }
 
-void UPathSelectionInteraction::OnClickRelease(const FInputDeviceRay& ReleasePos)
+void UTLLRN_PathSelectionInteraction::OnClickRelease(const FInputDeviceRay& ReleasePos)
 {
 	UGeometrySelectionManager* SelectionManager = SelectionInteraction->GetSelectionManager();
 	if (SelectionManager->IsInTrackedSelectionChange())
@@ -542,7 +542,7 @@ void UPathSelectionInteraction::OnClickRelease(const FInputDeviceRay& ReleasePos
 	}
 }
 
-void UPathSelectionInteraction::OnTerminateDragSequence()
+void UTLLRN_PathSelectionInteraction::OnTerminateDragSequence()
 {
 	UGeometrySelectionManager* SelectionManager = SelectionInteraction->GetSelectionManager();
 	if (SelectionManager->IsInTrackedSelectionChange())
