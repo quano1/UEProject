@@ -2,12 +2,13 @@
     "tasks": [
       {
         "type": "process",
-        "label": "make libfordosd",
+        "label": "build",
         "command": "C:/Program Files/dotnet/dotnet.exe",
         // "command": "'/mnt/c/Program Files/dotnet/dotnet.exe'",
         "args": [
           "D:/UE/UE_5.5/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll",
           "MyProject55Editor",
+          "Editor",
           "Win64",
           "Development",
           "-Project", "${workspaceFolder}/MyProject55.uproject",

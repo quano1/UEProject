@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "libfordosd",
+            "name": "Editor",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "D:/UE/UE_5.5/Engine/Binaries/Win64/UnrealEditor.exe",
