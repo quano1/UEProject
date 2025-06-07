@@ -8,9 +8,9 @@
             "name": "Editor",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "D:/UE/UE_5.5/Engine/Binaries/Win64/UnrealEditor.exe",
+            "program": "D:/UE/UE_5.6/Engine/Binaries/Win64/UnrealEditor.exe",
             "args": [
-                "${workspaceFolder}/MyProject55.uproject",
+                "${workspaceFolder}/MyProject56.uproject",
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -20,9 +20,9 @@
                 "moduleLoad": true,
                 "trace": true
             },
-            "sourceFileMap": { "D:/build/++UE5/Sync/Engine" : "D:/UE/UE_5.5/Engine" },
-            "symbolSearchPath": "D:/UE/UE_5.5/Engine/Binaries/Win64",
-            // "requireExactSource": "D:/UE/UE_5.5/Engine",
+            "sourceFileMap": { "D:/build/++UE5/Sync/Engine" : "D:/UE/UE_5.6/Engine" },
+            "symbolSearchPath": "D:/UE/UE_5.6/Engine/Binaries/Win64",
+            // "requireExactSource": "D:/UE/UE_5.6/Engine",
             // "setupCommands": [
             //     {
             //         "description": "Enable pretty-printing for gdb",
